@@ -93,9 +93,9 @@ async function fonts() {
 }
 
 async function watchFiles() {
-  watch([path.watch.scss], scssToCss);
+  watch([path.watch.scss], series(scssToCss, pugToHTML));
   // watch([path.watch.ts], tsCompile);
-  watch([path.watch.pug], pugToHTML);
+  watch([path.watch.pug], series(scssToCss, pugToHTML));
   watch([path.watch.img], images);
   watch([path.watch.font], fonts);
 }
