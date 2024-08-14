@@ -11,6 +11,10 @@ const imagemin = require("gulp-imagemin");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const rigger = require("gulp-rigger");
+const postcss = require('gulp-postcss');
+
+
+const tailwindcss = require('tailwindcss');
 
 const ts = require("gulp-typescript");
 const tsProject = ts.createProject("tsconfig.json");
@@ -50,7 +54,10 @@ async function scssToCss() {
   return src(path.src.scss, { base: "src/scss/" })
     .pipe(plumber())
     .pipe(scss())
-    .pipe(autoprefixer())
+    .pipe(postcss([
+      tailwindcss('tailwind.config.js'),
+      require('autoprefixer')
+    ]))
     .pipe(cssbeautify())
     .pipe(dest(path.build.css))
     .pipe(cssnano())
@@ -58,6 +65,7 @@ async function scssToCss() {
     .pipe(dest(path.build.css))
     .pipe(browserSync.stream());
 }
+
 
 // async function tsCompile() {
 //   return tsProject
