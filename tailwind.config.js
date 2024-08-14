@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.html",
-    "./src/**/*.pug",
-    "./src/scss/**/*.scss",
-  ],
+  content: ["./src/**/*.html", "./src/**/*.pug", "./src/scss/**/*.scss"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        dewi: ['RF Dewi', 'sans-serif']
+      }
+    },
   },
   plugins: [],
-}
+};
