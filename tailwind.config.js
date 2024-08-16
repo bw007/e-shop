@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        dewi: ['RF Dewi', 'sans-serif']
+        dewi: ['"RF Dewi"', 'sans-serif']
       },
       maxWidth: {
         'screen-sm': '640px',
