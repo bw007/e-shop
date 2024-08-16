@@ -1,3 +1,56 @@
-footer.bg-black
-  .flex.items-center.justify-between.gap-4.py-8.font-dewi(class="px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl")
-    | sasamk
+footer.bg-black.py-10
+  .font-dewi(class="px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl")
+    .flex.items-start.justify-between.gap-4.text-white(class="flex-col items-center xs:items-start xs:flex-row xs:flex-wrap md:flex-nowrap")
+      a(href="index.html", class="xs:hidden mb-4")
+        img(src="./images/footer/footer-logo.svg", alt="Brand logo", width="100", height="40")
+      .flex.flex-col.items-start.gap-3(class="w-full xs:w-auto")
+        h2.font-black.uppercase(class="text-[15px]") Каталог
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Одежда
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Обувь
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Аксессуары
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Расчет стоимости
+        a.hidden(href="index.html", class="md:inline-block mt-12")
+          img(src="./images/footer/footer-logo.svg", alt="Brand logo", width="100", height="40")
+      .flex.flex-col.items-start.gap-3(class="w-full xs:w-auto")
+        h2.font-black.uppercase(class="text-[15px]") Информация
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Блог
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Контакты
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Доставка
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") Оплата
+        a(href="#", class="text-[15px] opacity-75 hover:opacity-100") FAQ
+      .flex.flex-col.items-start.gap-3(class="w-full xs:w-auto")
+        h2.font-black.uppercase(class="text-[15px]") Контакты
+        a(href="mailto:someone@example.com", class="text-[15px] underline underline-offset-2 opacity-80 hover:opacity-100") someone@example.com
+        a(href="tel:+998907226892", class="text-[15px] opacity-90 hover:opacity-100") +998 90 123 45 67
+        h2.text-xs.font-semibold.uppercase(class="hidden xs:block") Мессенджеры
+        .items-start.gap-2(class="hidden xs:flex")
+          a(href="#", class="opacity-90 hover:opacity-100")
+            img(src="./images/footer/telegram.svg", alt="")
+          a(href="#", class="opacity-90 hover:opacity-100")
+            img(src="./images/footer/whatsapp.svg", alt="")
+        h2.text-xs.font-semibold.uppercase(class="hidden xs:block") Наши соц.сети
+        .items-start.gap-2(class="hidden xs:flex")
+          a(href="#", class="opacity-90 hover:opacity-100")
+            img(src="./images/footer/wk.svg", alt="")
+      .flex.items-start.gap-2(class="xs:hidden")
+        a(href="#", class="opacity-90 hover:opacity-100")
+          img(src="./images/footer/telegram.svg", alt="")
+        a(href="#", class="opacity-90 hover:opacity-100")
+          img(src="./images/footer/whatsapp.svg", alt="")
+        a(href="#", class="opacity-90 hover:opacity-100")
+          img(src="./images/footer/wk.svg", alt="")
+      .flex.flex-col.items-center.gap-3(class="justify-center text-center xs:text-left xs:items-start w-full md:w-auto")
+        h2.font-black.uppercase(class="text-[15px]") Подписка на новости
+        .flex.items-center.justify-between(class="flex-col xs:flex-row w-full md:flex-col md:items-start")
+          p(class="text-[15px] opacity-75") Будьте в курсе скидок и новостей
+          .flex.items-center.justify-between.border-b.opacity-90.mt-0(class="w-full xs:w-2/4 py-1.5 md:w-full md:mt-4")
+            input.outline-none.border-none.bg-transparent.text-sm(type="text", placeholder="Ваш email")
+            button.bg-white.w-7.h-7.flex.items-center.justify-center.rounded-full(class="opacity-90 hover:opacity-100")
+              img(src="./images/icons/arrow-right.svg", alt="", width="6")
+        a.inline-block.w-full.opacity-50.text-xs.mt-2(href="#", class="md:max-w-60 hover:opacity-90") Подписываясь на рассылку вы соглашатесь с обработкой персональных данных
+        .flex.items-center.w-full.mt-6
+          a(href="index.html", class="hidden xs:inline-block md:hidden")
+            img(src="./images/footer/footer-logo.svg", alt="Brand logo", width="100", height="40")
+          .flex.flex-col.gap-1.text-white.text-xs.uppercase.mx-auto(class="md:m-0 md:mt-1")
+            a(href="#", class="underline underline-offset-2 opacity-50 hover:opacity-90") Политика конфиденциальности
+            a(href="#", class="underline underline-offset-2 opacity-50 hover:opacity-90") Пользовательское соглашение
