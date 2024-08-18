@@ -6,6 +6,13 @@ module.exports = {
       fontFamily: {
         dewi: ['"RF Dewi"', 'sans-serif']
       },
+      backgroundImage: {
+        'blue-gradient': 'linear-gradient(to right, #0D99F8, #21A0F8, #54B5FF, #0DBBF8, #0DDBF8)',
+        'logo-mask-gradient': `
+          linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.3)),
+          url('../images/footer/logo-mask.svg')
+        `,
+      },
       maxWidth: {
         'screen-sm': '640px',
         'screen-md': '768px',
