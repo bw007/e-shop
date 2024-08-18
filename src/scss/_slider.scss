@@ -32,3 +32,20 @@
 .swiper-button-next {
   right: 0;
 }
+
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.swiper-pagination-bullet {
+  background-color: #121214;
+  width: 6px !important;
+  height: 6px !important;
+  transition: all 0.25s linear !important;
+}
+.swiper-pagination-bullet-active {
+  width: 10px !important;
+  height: 10px !important;
+}
