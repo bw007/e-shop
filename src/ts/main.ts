@@ -1,12 +1,32 @@
 // SLIDER
-type Breakpoints = {
+interface Breakpoints {
   [key: number]: {
     slidesPerView: number;
     spaceBetween: number;
   };
-};
+}
 
-declare var Swiper: any;
+interface SwiperOptions {
+  slidesPerView?: number;
+  spaceBetween?: number;
+  autoplay?: {
+    delay?: number;
+    disableOnInteraction?: boolean;
+  };
+  navigation?: {
+    nextEl?: string;
+    prevEl?: string;
+  };
+  breakpoints?: Breakpoints;
+  pagination?: {
+    el?: string;
+    clickable?: boolean;
+  };
+}
+
+declare class Swiper {
+  constructor(selector: string, options?: SwiperOptions);
+}
 
 function createSwiper(selector: string, delay: number, breakpoints: Breakpoints) {
   return new Swiper(selector, {
