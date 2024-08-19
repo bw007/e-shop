@@ -1,0 +1,8 @@
+mixin product-card(img="", imgLarge="", title="", price="")
+  .swiper-slide.flex.flex-col.justify-center.relative
+    img.absolute.top-2.right-2(src="./images/icons/star-dark.svg" alt="" width="19")
+    picture.object-cover
+      source(srcset=`./images/product/${img}` media="(max-width: 420px)")
+      img.w-full.h-auto.object-cover(src=`./images/product/${imgLarge}` alt="Card Image")
+    p.text-sm.font-bold.uppercase(class="sm:text-lg")= `${title}`
+    span.text-sm(class="sm:text-lg")= `от ${price}`

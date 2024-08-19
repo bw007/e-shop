@@ -1,0 +1,58 @@
+
+.swiper-button-prev, .swiper-button-next {
+  background: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  &::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 700;
+    color: green;
+    border: 2px solid;
+    transition: color 0.15s linear;
+  }
+  &:hover {
+    &::after {
+      color: brown;
+    }
+  }
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-wrapper {
+  align-items: stretch !important;
+}
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.swiper-pagination-bullet {
+  background-color: #121214;
+  width: 6px !important;
+  height: 6px !important;
+  transition: all 0.25s linear !important;
+}
+.swiper-pagination-bullet-active {
+  width: 10px !important;
+  height: 10px !important;
+}

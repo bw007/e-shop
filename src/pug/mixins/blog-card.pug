@@ -1,0 +1,10 @@
+mixin blog-card(img="", imgLarge="", title="", desc="", date="")
+  .swiper-slide.min-h-96.flex.flex-col.justify-between.gap-3
+    picture.object-cover
+      source(srcset=`./images/footer/${img}` media="(max-width: 420px)")
+      img.w-full.h-auto.object-cover(src=`./images/footer/${imgLarge}` alt="Card Image")
+    h2.text-base.font-bold(class="xl:leading-normal sm:text-lg xxl:text-[22px]")= title
+    p(class="text-[15px]")= desc
+    .flex.items-center.justify-between
+      a.text-sm.font-bold.uppercase(href="#" class="hover:underline underline-offset-2") Узнать подробнее
+      span.text-xs.text-gray-500= date
