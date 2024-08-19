@@ -1,0 +1,33 @@
+header.bg-black
+  .flex.items-center.justify-between.gap-4.py-8.font-dewi(class="px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl")
+    a.hidden(href="index.html", class="min-[420px]:inline-block"): img(src="./images/header/logo.svg", alt="Brand logo", width="84", height="34")
+    img.inline-block(class="min-[420px]:ml-8 min-[420px]:mr-auto lg:hidden opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer", src="./images/header/menu-icon.svg")
+    img(src="./images/icons/search.svg", class="inline-block ml-4 min-[420px]:hidden opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer")
+    a.inline-block(href="index.html", class="min-[420px]:hidden mx-auto"): img(src="./images/header/logo.svg", alt="Brand logo", width="68", height="28")
+    nav.items-center.gap-4.text-white.text-sm.hidden.font-semibold(class="xl:gap-8 lg:flex")
+      a.flex.items-center.gap-1(href="#")
+        | Одежда
+        img(src="./images/icons/arrow-down.svg", alt="")
+      a.flex.items-center.gap-1(href="#")
+        | Обувь
+        img(src="./images/icons/arrow-down.svg", alt="")
+      a.flex.items-center.gap-1(href="#")
+        | Аксессуары
+        img(src="./images/icons/arrow-down.svg", alt="")
+      a.flex.items-center.gap-1(href="#")
+        | Бренды
+        img(src="./images/icons/arrow-down.svg", alt="")
+      a.flex.items-center.gap-1(href="#")
+        | Расчет стоимости
+        img(src="./images/icons/arrow-down.svg", alt="")
+      a.flex.items-center.gap-1.bg(href="#")
+        | Информация
+        img(src="./images/icons/arrow-down.svg", alt="")
+    .flex.items-center.gap-6
+      img(src="./images/icons/search.svg", alt="", class="hidden min-[420px]:inline-block opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer")
+      img(src="./images/icons/star.svg", alt="", class="opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer")
+      img(src="./images/icons/user.svg", alt="", class="opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer")
+      .text-xs.font-bold.flex.items-center.gap-1.relative(class="opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer")
+        img(src="./images/icons/backet.svg", alt="")
+        span.hidden(class="sm:inline-block text-gray-400 opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer") 11 899 ₽
+        span.absolute(class="w-[18px] h-[18px] sm:static -right-1.5 -top-2.5 inline-flex items-center justify-center rounded-full bg-cyan-400 text-white") 7

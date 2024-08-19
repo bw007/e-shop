@@ -1,7 +1,7 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-  body Home
+extends ../layouts/main.pug
+
+block content
+  include ../components/home/_hero.pug
+  include ../components/home/_product-slider-list.pug
+  include ../components/home/_shop-about.pug
+  include ../components/home/_blog.pug

@@ -11,6 +11,9 @@ const imagemin = require("gulp-imagemin");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const rigger = require("gulp-rigger");
+const postcss = require('gulp-postcss');
+
+const tailwindcss = require('tailwindcss');
 
 const ts = require("gulp-typescript");
 const tsProject = ts.createProject("tsconfig.json");
@@ -20,6 +23,7 @@ const path = {
     pug: "src/pug/pages/**/*.pug",
     scss: "src/scss/*.scss",
     ts: "src/ts/**/*.ts",
+    js: "src/js/**/*.js",
     img: "src/images/**/*.{jpg,png,svg,gif,ico}",
     font: "src/fonts/**/*"
   },
@@ -27,6 +31,7 @@ const path = {
     pug: "src/pug/**/*.pug",
     scss: "src/scss/**/*.scss",
     ts: "src/ts/**/*.ts",
+    js: "src/js/**/*.js",
     img: "src/images/**/*.{jpg,png,svg,gif,ico}",
     font: "src/fonts/**/*",
   },
@@ -50,7 +55,10 @@ async function scssToCss() {
   return src(path.src.scss, { base: "src/scss/" })
     .pipe(plumber())
     .pipe(scss())
-    .pipe(autoprefixer())
+    .pipe(postcss([
+      tailwindcss('tailwind.config.js'),
+      require('autoprefixer')
+    ]))
     .pipe(cssbeautify())
     .pipe(dest(path.build.css))
     .pipe(cssnano())
@@ -59,19 +67,25 @@ async function scssToCss() {
     .pipe(browserSync.stream());
 }
 
-// async function tsCompile() {
-//   return tsProject
-//     .src()
-//     .pipe(tsProject())
-//     .js
-//     .pipe(plumber())
-//     .pipe(rigger())
-//     .pipe(dest(path.build.js))
-//     .pipe(uglify())
-//     .pipe(rename({ suffix: ".min", extname: ".js" }))
-//     .pipe(dest(path.build.js))
-//     .pipe(browserSync.stream());
-// }
+async function js() {
+  return src(path.src.js, { allowEmpty: true })
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min', extname: '.js' }))
+    .pipe(dest(path.build.js)) 
+    .pipe(browserSync.stream());
+}
+
+async function tsCompile() {
+  return src(path.src.ts, { allowEmpty: true })
+    .pipe(plumber())
+    .pipe(tsProject())
+    .pipe(dest(path.build.js))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min', extname: '.js' }))
+    .pipe(dest(path.build.js))
+    .pipe(browserSync.stream());
+}
 
 async function images() {
   return src(path.src.img)
@@ -85,9 +99,10 @@ async function fonts() {
 }
 
 async function watchFiles() {
-  watch([path.watch.scss], scssToCss);
-  // watch([path.watch.ts], tsCompile);
-  watch([path.watch.pug], pugToHTML);
+  watch([path.watch.scss], series(scssToCss, pugToHTML));
+  watch([path.watch.js], js);
+  watch([path.watch.ts], tsCompile);
+  watch([path.watch.pug], series(scssToCss, pugToHTML));
   watch([path.watch.img], images);
   watch([path.watch.font], fonts);
 }
@@ -106,11 +121,12 @@ function cleanDist() {
     .pipe(clean());
 }
 
-const build = series(cleanDist, scssToCss, pugToHTML, images, fonts);
+const build = series(cleanDist, scssToCss, pugToHTML, js, tsCompile, images, fonts);
 const watching = series(build, watchFiles, browsersync);
 
 exports.scssToCss = scssToCss;
-// exports.tsCompile = tsCompile;
+exports.js = js;
+exports.tsCompile = tsCompile;
 exports.pugToHTML = pugToHTML;
 exports.images = images;
 exports.fonts = fonts;
