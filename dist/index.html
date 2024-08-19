@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+  </head>
+  <body class="font-dewi">
+    <header class="bg-black">
+      <div class="flex items-center justify-between gap-4 py-8 font-dewi px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl"><a class="hidden min-[420px]:inline-block" href="index.html"><img src="./images/header/logo.svg" alt="Brand logo" width="84" height="34"></a><img class="inline-block min-[420px]:ml-8 min-[420px]:mr-auto lg:hidden opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer" src="./images/header/menu-icon.svg"><img class="inline-block ml-4 min-[420px]:hidden opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer" src="./images/icons/search.svg"><a class="inline-block min-[420px]:hidden mx-auto" href="index.html"><img src="./images/header/logo.svg" alt="Brand logo" width="68" height="28"></a>
+        <nav class="items-center gap-4 text-white text-sm hidden font-semibold xl:gap-8 lg:flex"><a class="flex items-center gap-1" href="#">Одежда<img src="./images/icons/arrow-down.svg" alt=""></a><a class="flex items-center gap-1" href="#">Обувь<img src="./images/icons/arrow-down.svg" alt=""></a><a class="flex items-center gap-1" href="#">Аксессуары<img src="./images/icons/arrow-down.svg" alt=""></a><a class="flex items-center gap-1" href="#">Бренды<img src="./images/icons/arrow-down.svg" alt=""></a><a class="flex items-center gap-1" href="#">Расчет стоимости<img src="./images/icons/arrow-down.svg" alt=""></a><a class="flex items-center gap-1 bg" href="#">Информация<img src="./images/icons/arrow-down.svg" alt=""></a></nav>
+        <div class="flex items-center gap-6"><img class="hidden min-[420px]:inline-block opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer" src="./images/icons/search.svg" alt=""><img class="opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer" src="./images/icons/star.svg" alt=""><img class="opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer" src="./images/icons/user.svg" alt="">
+          <div class="text-xs font-bold flex items-center gap-1 relative opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer"><img src="./images/icons/backet.svg" alt=""><span class="hidden sm:inline-block text-gray-400 opacity-75 transition-opacity duration-300 hover:opacity-100 cursor-pointer">11 899 ₽</span><span class="absolute w-[18px] h-[18px] sm:static -right-1.5 -top-2.5 inline-flex items-center justify-center rounded-full bg-cyan-400 text-white">7</span></div>
+        </div>
+      </div>
+    </header>
+    <div class="hero bg-[url('../images/header/hero-mobile.jpg')] xxs:bg-[url('../images/header/hero-tablet.jpg')] lg:bg-[url('../images/header/hero-large.jpg')] xxs:bg-right-top lg:bg-center bg-no-repeat bg-cover mx-[10px] sm:mx-5 my-6 sm:my-10 p-[18px] sm:px-12 md:px-16 sm:py-10 2xl:py-16 rounded-[7px] xl:mx-auto bg-center xl:max-w-screen-xl xxl:max-w-screen-xxl 2xl:max-w-screen-2xl">
+      <div class="flex flex-col items-start justify-between gap-3 sm:gap-4 2xl:gap-6 px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl">
+        <h2 class="text-[18px] xs:text-[34px] lg:text-[50px] leading-tight font-black uppercase text-[#171819] max-w-56 md:max-w-96 lg:max-w-[570px] mt-6">Широкий ассортимент Одежды</h2>
+        <p class="text-xs xs:text-lg text-[#121214] max-w-44 xs:max-w-96 lg:max-w-[480px]">Одежда от известные брендов у нас в каталоге. Только качественные вещи.</p>
+        <button class="inline-flex items-center justify-center gap-4 bg-black uppercase text-xs font-extrabold rounded-[5px] text-gray-300 hover:text-white p-[18px] xs:p-5">Перейти в каталог<img src="./images/icons/arrow-right-white.svg" alt=""></button>
+        <div class="flex items-center gap-4 mt-3 2xl:mt-10">
+          <button class="bg-white opacity-80 flex items-center justify-center rounded-full w-16 h-16 hover:opacity-100"><img src="./images/icons/arrow-left.svg" alt=""></button>
+          <button class="bg-white opacity-80 flex items-center justify-center rounded-full w-16 h-16 hover:opacity-100"><img src="./images/icons/arrow-right.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-between gap-4 py-8 px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl">
+      <div class="flex flex-col w-full my-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-xl font-black uppercase sm:text-3xl">Обувь</h1><a class="flex items-center gap-2 underline uppercase text-xs font-semibold underline-offset-4 opacity-75 hover:opacity-100 sm:text-sm" href="#">больше товаров<img src="./images/icons/arrow-right.svg" alt="" width="6"></a>
+        </div>
+        <div class="swiper w-full my-4 mt-8" id="slider1">
+          <div class="swiper-wrapper mb-12">
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/sneaker-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/sneaker-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/sneaker-small-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/sneaker-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra</p><span class="text-sm sm:text-lg">от 6 789 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/sneaker-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/sneaker-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/sneaker-small-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/sneaker-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra</p><span class="text-sm sm:text-lg">от 6 789 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/sneaker-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/sneaker-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/sneaker-small-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/sneaker-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra</p><span class="text-sm sm:text-lg">от 6 789 ₽</span>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="flex flex-col w-full my-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-xl font-black uppercase sm:text-3xl">Одежда</h1><a class="flex items-center gap-2 underline uppercase text-xs font-semibold underline-offset-4 opacity-75 hover:opacity-100 sm:text-sm" href="#">больше товаров<img src="./images/icons/arrow-right.svg" alt="" width="6"></a>
+        </div>
+        <div class="swiper w-full my-4 mt-8" id="slider2">
+          <div class="swiper-wrapper mb-12">
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/shirt-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/shirt-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/shirt-small-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/shirt-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra Flyknit</p><span class="text-sm sm:text-lg">от 3 789 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/shirt-3.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/shirt-3.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/shirt-4.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/shirt-4.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Men’s Soccer Shoes</p><span class="text-sm sm:text-lg">от 2 789 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/shirt-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/shirt-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/shirt-small-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/shirt-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra</p><span class="text-sm sm:text-lg">от 6 789 ₽</span>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="flex flex-col w-full my-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-xl font-black uppercase sm:text-3xl">Аксессуары</h1><a class="flex items-center gap-2 underline uppercase text-xs font-semibold underline-offset-4 opacity-75 hover:opacity-100 sm:text-sm" href="#">больше товаров<img src="./images/icons/arrow-right.svg" alt="" width="6"></a>
+        </div>
+        <div class="swiper w-full my-4 mt-8" id="slider3">
+          <div class="swiper-wrapper mb-12">
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/cap-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/cap-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/bag-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/bag-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra Flyknit</p><span class="text-sm sm:text-lg">от 3 789 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/headdress-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/headdress-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/bag-2.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/bag-2.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Men’s Soccer Shoes</p><span class="text-sm sm:text-lg">от 2 789 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/cap-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/cap-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Nike Court Zoom Cage 2</p><span class="text-sm sm:text-lg">от 4 699 ₽</span>
+            </div>
+            <div class="swiper-slide flex flex-col justify-center relative"><img class="absolute top-2 right-2" src="./images/icons/star-dark.svg" alt="" width="19"/>
+              <picture class="object-cover">
+                <source srcset="./images/product/bag-small-1.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/product/bag-1.png" alt="Card Image"/>
+              </picture>
+              <p class="text-sm font-bold uppercase sm:text-lg">Air Force 1 Ultra Flyknit</p><span class="text-sm sm:text-lg">от 3 789 ₽</span>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full mt-56 xxs:mt-52 xs:mt-48 lg:mt-96 bg-logo-mask-gradient bg-contain bg-no-repeat bg-[#D9D9D9]">
+      <div class="relative h-full pt-72 pb-12 xs:pt-[350px] sm:pt-[375px] px-2.5 sm:px-4 mx-auto max-w-full xl:max-w-screen-xl xxl:max-w-screen-xxl">
+        <div class="absolute right-0 left-0 text-white -top-[24%] lg:-top-[50%] 2xl:-left-[74px] 2xl:-right-[74px] bg-blue-gradient mx-2.5 sm:mx-4 p-[18px] sm:px-12 md:px-16 lg:py-24 rounded-[7px] xl:mx-auto bg-center xl:max-w-screen-xl xxl:max-w-screen-xxl 2xl:max-w-screen-2xl">
+          <picture class="object-cover absolute hidden md:block -top-3.5 xl:-top-8 right-[8%] lg:right-[5%] xl:right-[8%] 2xl:right-[15%]">
+            <source srcset="./images/footer/phone-tablet.png" media="(max-width: 1024px)"><img class="object-cover lg:w-64 xl:w-auto" src="./images/footer/phone.png" alt="">
+          </picture>
+          <div class="flex flex-col items-center justify-between gap-4 text-center py-5 md:text-left sm:px-4 md:items-start sm:gap-5 2xl:gap-6 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl">
+            <h2 class="text-2xl xs:text-[34px] lg:text-[50px] leading-tight font-black uppercase max-w-56 md:max-w-96 lg:max-w-[570px]">Рассчитать стоимость</h2>
+            <p class="text-sm xs:text-[17px] lg:text-[19px] xs:leading-normal w-full md:max-w-96 lg:max-w-[620px]">Если вам не удалось найти то, что искали, вы всегда можете воспользоваться автоматическим расчетом стоимость заказа на маркетплейсе Poizon, включая комиссию сервиса и доставку.</p>
+            <div class="flex flex-col text-left gap-8 md:flex-row md:mt-8">
+              <div class="flex items-center gap-5">
+                <h2 class="flex items-center justify-center shrink-0 rounded-full border border-white text-2xl font-bold w-[64px] h-[64px]">1</h2><span class="text-sm inline-block w-full xs:max-w-96 lg:max-w-[258px] lg:text-base">Подробная, пошаговая статья о том, как установить приложение Poizon</span>
+              </div>
+              <div class="flex items-center gap-5">
+                <h2 class="flex items-center justify-center shrink-0 rounded-full border border-white text-2xl font-bold w-[64px] h-[64px]">2</h2><span class="text-sm inline-block w-full xs:max-w-96 lg:max-w-[258px] lg:text-base">Напишите нам в Telegram или WhatsApp какую вещь хотите купить</span>
+              </div>
+            </div>
+            <button class="inline-flex items-center justify-center gap-4 bg-black uppercase text-xs font-extrabold mt-4 rounded-[5px] text-gray-300 hover:text-white p-[18px] xs:p-6">Рассчитать стоимость<img src="./images/icons/arrow-right-white.svg" alt=""></button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
+          <div class="flex flex-col gap-3 lg:gap-5">
+            <h1 class="text-xl font-black uppercase max-w-64 sm:text-2xl lg:text-4xl lg:max-w-96">О интернет-магазине xwear</h1>
+            <div class="text-sm flex flex-col gap-2 leading-relaxed lg:gap-3">
+              <p>Команда XWEAR предоставляет услугу доставки только оригинальных товаров c крупнейшего китайского маркетплейса Poizon, чтобы наши клиенты экономили более 40% на каждой покупке.</p>
+              <p>Работаем без посредников, благодаря чему можем предоставлять лучшую цену. Быстрая, бесплатная доставка.</p>
+              <p>Сайт, на котором можно будет удобно оформить покупку, не скачивая китайское мобильное приложение Poizon, с удобной фильтрацией огромного количества товаров, а так же с возможностью сразу увидеть окончательную цену товара.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-7 bg-white rounded text-sm p-[22px] sm:flex-row sm:p-[30px] lg:p-10 lg:flex-col lg:min-w-[415px]">
+            <div class="flex items-start gap-6 sm:flex-col lg:flex-row"><img src="./images/icons/box.svg" alt="" width="44">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-xs font-black uppercase">Бесплатная доставка до России</h2>
+                <p>Доставим вам заказ абсолютно бесплатно до России</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 sm:flex-col lg:flex-row"><img src="./images/icons/users.svg" alt="" width="44">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-xs font-black uppercase">мы Работаем без посредников</h2>
+                <p>Между нами и клиентом нет третьего лишнего</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 sm:flex-col lg:flex-row"><img src="./images/icons/check.svg" alt="" width="44">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-xs font-black uppercase">простота в заказе и использовании</h2>
+                <p>Для заказа с Poizon не нужно никаких приложений</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-between gap-4 py-8 px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl">
+      <div class="flex flex-col w-full my-4 sm:my-8 lg:my-10">
+        <div class="flex items-center justify-between">
+          <h1 class="text-xl font-black uppercase sm:text-3xl">Наш блог</h1><a class="flex items-center gap-2 underline uppercase text-xs font-semibold underline-offset-4 opacity-75 hover:opacity-100 sm:text-sm" href="#">больше статей<img src="./images/icons/arrow-right.svg" alt="" width="6"></a>
+        </div>
+        <div class="swiper w-full my-4 mt-8" id="slider4">
+          <div class="swiper-wrapper mb-12">
+            <div class="swiper-slide min-h-96 flex flex-col justify-between gap-3">
+              <picture class="object-cover">
+                <source srcset="./images/footer/blog-card.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/footer/blog-card.png" alt="Card Image"/>
+              </picture>
+              <h2 class="text-base font-bold xl:leading-normal sm:text-lg xxl:text-[22px]">Делаем скидки на всю женскую одежду осеннего сезона</h2>
+              <p class="text-[15px]">Мы запускаем акцию. Готовься к осени с лета. На протяжении всего лета покупайте женские осенние вещи со скидками.</p>
+              <div class="flex items-center justify-between"><a class="text-sm font-bold uppercase hover:underline underline-offset-2" href="#">Узнать подробнее</a><span class="text-xs text-gray-500">16 июня 2023</span></div>
+            </div>
+            <div class="swiper-slide min-h-96 flex flex-col justify-between gap-3">
+              <picture class="object-cover">
+                <source srcset="./images/footer/blog-card.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/footer/blog-card.png" alt="Card Image"/>
+              </picture>
+              <h2 class="text-base font-bold xl:leading-normal sm:text-lg xxl:text-[22px]">Джинсы для всех друзей. Скидки на большие покупки</h2>
+              <p class="text-[15px]">Мы запускаем акцию. Готовься к осени с лета. На протяжении всего лета покупайте женские осенние вещи со скидками.</p>
+              <div class="flex items-center justify-between"><a class="text-sm font-bold uppercase hover:underline underline-offset-2" href="#">Узнать подробнее</a><span class="text-xs text-gray-500">16 июня 2023</span></div>
+            </div>
+            <div class="swiper-slide min-h-96 flex flex-col justify-between gap-3">
+              <picture class="object-cover">
+                <source srcset="./images/footer/blog-card.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/footer/blog-card.png" alt="Card Image"/>
+              </picture>
+              <h2 class="text-base font-bold xl:leading-normal sm:text-lg xxl:text-[22px]">Делаем скидки на всю женскую одежду осеннего сезона </h2>
+              <p class="text-[15px]">Мы запускаем акцию. Готовься к осени с лета. На протяжении всего лета покупайте женские осенние вещи со скидками.</p>
+              <div class="flex items-center justify-between"><a class="text-sm font-bold uppercase hover:underline underline-offset-2" href="#">Узнать подробнее</a><span class="text-xs text-gray-500">16 июня 2023</span></div>
+            </div>
+            <div class="swiper-slide min-h-96 flex flex-col justify-between gap-3">
+              <picture class="object-cover">
+                <source srcset="./images/footer/blog-card.png" media="(max-width: 420px)"/><img class="w-full h-auto object-cover" src="./images/footer/blog-card.png" alt="Card Image"/>
+              </picture>
+              <h2 class="text-base font-bold xl:leading-normal sm:text-lg xxl:text-[22px]">Делаем скидки на всю женскую одежду осеннего сезона </h2>
+              <p class="text-[15px]">Мы запускаем акцию. Готовься к осени с лета. На протяжении всего лета покупайте женские осенние вещи со скидками.</p>
+              <div class="flex items-center justify-between"><a class="text-sm font-bold uppercase hover:underline underline-offset-2" href="#">Узнать подробнее</a><span class="text-xs text-gray-500">16 июня 2023</span></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-black py-10">
+      <div class="font-dewi px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl">
+        <div class="flex items-center justify-between gap-4 text-white flex-col xs:items-start xs:flex-row xs:flex-wrap md:flex-nowrap"><a class="xs:hidden mb-4" href="index.html"><img src="./images/footer/footer-logo.svg" alt="Brand logo" width="100" height="40"></a>
+          <div class="flex flex-col items-start gap-3 w-full xs:w-auto">
+            <h2 class="font-black uppercase text-[15px]">Каталог</h2><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Одежда</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Обувь</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Аксессуары</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Расчет стоимости</a><a class="hidden md:inline-block mt-12" href="index.html"><img src="./images/footer/footer-logo.svg" alt="Brand logo" width="100" height="40"></a>
+          </div>
+          <div class="flex flex-col items-start gap-3 w-full xs:w-auto">
+            <h2 class="font-black uppercase text-[15px]">Информация</h2><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Блог</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Контакты</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Доставка</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">Оплата</a><a class="text-[15px] opacity-75 hover:opacity-100" href="#">FAQ</a>
+          </div>
+          <div class="flex flex-col items-start gap-3 w-full xs:w-auto">
+            <h2 class="font-black uppercase text-[15px]">Контакты</h2><a class="text-[15px] underline underline-offset-2 opacity-80 hover:opacity-100" href="mailto:someone@example.com">someone@example.com</a><a class="text-[15px] opacity-90 hover:opacity-100" href="tel:+998907226892">+998 90 123 45 67</a>
+            <h2 class="text-xs font-semibold uppercase hidden xs:block">Мессенджеры</h2>
+            <div class="items-start gap-2 hidden xs:flex"><a class="opacity-90 hover:opacity-100" href="#"><img src="./images/footer/telegram.svg" alt=""></a><a class="opacity-90 hover:opacity-100" href="#"><img src="./images/footer/whatsapp.svg" alt=""></a></div>
+            <h2 class="text-xs font-semibold uppercase hidden xs:block">Наши соц.сети</h2>
+            <div class="items-start gap-2 hidden xs:flex"><a class="opacity-90 hover:opacity-100" href="#"><img src="./images/footer/wk.svg" alt=""></a></div>
+          </div>
+          <div class="flex items-start gap-2 xs:hidden"><a class="opacity-90 hover:opacity-100" href="#"><img src="./images/footer/telegram.svg" alt=""></a><a class="opacity-90 hover:opacity-100" href="#"><img src="./images/footer/whatsapp.svg" alt=""></a><a class="opacity-90 hover:opacity-100" href="#"><img src="./images/footer/wk.svg" alt=""></a></div>
+          <div class="flex flex-col items-center gap-3 justify-center text-center xs:text-left xs:items-start w-full md:w-auto">
+            <h2 class="font-black uppercase text-[15px]">Подписка на новости</h2>
+            <div class="flex items-center justify-between flex-col xs:flex-row w-full md:flex-col md:items-start">
+              <p class="text-[15px] opacity-75">Будьте в курсе скидок и новостей</p>
+              <div class="flex items-center justify-between border-b opacity-90 mt-0 w-full xs:w-2/4 py-1.5 md:w-full md:mt-4">
+                <input class="outline-none border-none bg-transparent text-sm" type="text" placeholder="Ваш email">
+                <button class="bg-white w-7 h-7 flex items-center justify-center rounded-full opacity-90 hover:opacity-100"><img src="./images/icons/arrow-right.svg" alt="" width="6"></button>
+              </div>
+            </div><a class="inline-block w-full opacity-50 text-xs mt-2 md:max-w-60 hover:opacity-90" href="#">Подписываясь на рассылку вы соглашатесь с обработкой персональных данных</a>
+            <div class="flex items-center w-full mt-6"><a class="hidden xs:inline-block md:hidden" href="index.html"><img src="./images/footer/footer-logo.svg" alt="Brand logo" width="100" height="40"></a>
+              <div class="flex flex-col gap-1 text-white text-xs uppercase mx-auto md:m-0 md:mt-1"><a class="underline underline-offset-2 opacity-50 hover:opacity-90" href="#">Политика конфиденциальности</a><a class="underline underline-offset-2 opacity-50 hover:opacity-90" href="#">Пользовательское соглашение</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/swiper-bundle.min.js"> </script>
+    <script src="./js/main.min.js"> </script>
+  </body>
+</html>
