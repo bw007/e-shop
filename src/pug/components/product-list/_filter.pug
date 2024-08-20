@@ -1,0 +1,63 @@
+.flex.flex-col.gap-8.w-80.shrink-0.hidden(class="md:flex")
+  .flex.flex-col.gap-4.w-full.border.p-6.rounded
+    .flex.items-center.justify-between
+      h3.text-sm.font-black.uppercase Категории
+      img(src="./images/icons/arrow-up.svg", alt="")
+    .flex.flex-col.gap-3.text-sm.font-medium
+      a(href="sneaker.html", class="opacity-80 hover:opacity-100") Кроссовки
+      a(href="#", class="opacity-80 hover:opacity-100") Кеды
+      a(href="#", class="opacity-80 hover:opacity-100") Лофферы
+      a(href="#", class="opacity-80 hover:opacity-100") Сандали
+      a(href="#", class="opacity-80 hover:opacity-100") Шлепки
+  .flex.flex-col.gap-8.w-full
+    .flex.flex-col.gap-4.w-full.border.p-6.rounded
+      .flex.items-center.justify-between
+        h3.text-sm.font-black.uppercase Фильтр по цене
+        img(src="./images/icons/arrow-up.svg", alt="")
+      .flex.flex-col.gap-8
+        .flex.items-center.justify-between.opacity-85.gap-2.text-gray-500
+          .flex.items-center.justify-center.bg-gray-100.p-3.rounded(class="w-[45%]")
+            input.border-none.outline-none.bg-transparent.w-14.inline-block(type="number", name="", value="10", min="10", max="1000")
+            span ₽
+          span -
+          .flex.items-center.justify-center.bg-gray-100.p-3.rounded(class="w-[45%]")
+            input.border-none.outline-none.bg-transparent.w-14.inline-block(type="number", name="", value="1000", min="10", max="1000")
+            span ₽
+        .relative.w-full.h-1.bg-gray-200.opacity-85.rounded.text-xs.text-gray-300.z-0.mb-2
+          .absolute.left-3.border.rounded-full.flex.items-center.justify-center.bg-white.shadow-custom(class="w-[17px] h-[17px] leading-[17px] -top-[7px] z-10 cursor-pointer") =
+          .absolute.bg-cyan-400.left-4.bottom-0.top-0.w-40
+          .absolute.right-20.border.rounded-full.flex.items-center.justify-center.bg-white.shadow-custom(class="w-[17px] h-[17px] leading-[17px] -top-[7px] z-10 cursor-pointer") =
+    .flex.flex-col.gap-4.w-full.border.p-6.rounded
+      .flex.items-center.justify-between
+        h3.text-sm.font-black.uppercase Размеры (EU)
+        img(src="./images/icons/arrow-up.svg", alt="")
+      .grid.grid-cols-3.gap-3(class="")
+        each size in [36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40, 40.5, 41, 41.5, 42, 42.5]
+          .flex.items-center.justify-center.border.border-gray-200.p-2.cursor-pointer.transition-colors.rounded(class="hover:text-white hover:bg-[#49D0FF]")= size
+    .flex.flex-col.gap-4.w-full.border.p-6.rounded
+      .flex.items-center.justify-between
+        h3.text-sm.font-black.uppercase Бренды
+        img(src="./images/icons/arrow-up.svg", alt="")
+      .flex.flex-col.gap-3.text-sm.font-medium
+        each i in ["Adidas", "Ammity", "AppleGate", "Basic Fitness", "BH Fitness", "Body Craft"]
+          label.text-sm.font-medium.flex.items-center.gap-3
+            input(type="radio", name="brand", value=i)
+            span= i
+    .flex.flex-col.gap-4.w-full.border.p-6.rounded
+      .flex.items-center.justify-between
+        h3.text-sm.font-black.uppercase Бренды
+        img(src="./images/icons/arrow-up.svg", alt="")
+      .flex.flex-col.gap-3.text-sm.font-medium
+        each i in ["Adidas", "Ammity", "AppleGate", "Basic Fitness", "BH Fitness", "Body Craft"]
+          label.text-sm.font-medium.flex.items-center.gap-3
+            input(type="radio", name="brand", value=i)
+            span= i
+    .flex.flex-col.gap-4.w-full.border.p-6.rounded
+      .flex.items-center.justify-between
+        h3.text-sm.font-black.uppercase Цвет
+        img(src="./images/icons/arrow-up.svg", alt="")
+      .grid.grid-cols-3.gap-3(class="")
+        each item in [{name:"Серый",value:"#CCCCCC"}, {name:"Белый",value:"#FAFAFA"}, {name:"Синий",value:"#0000FF"}, {name:"Голубой",value:"#6ECFFF"}, {name:"Желтый",value:"#FFFF00"}, {name:"Зеленый",value:"#008000"}, {name:"Коричневый",value:"#754C24"}, {name:"Красный",value:"#FF0000"}]
+          .flex.flex-col.items-center.justify-center.gap-1.p-2.cursor-pointer
+            .w-7.h-7.rounded-full(style=`background-color: ${item.value};`)
+            .opacity-85(class="opacity-80 hover:opacity-100")= item.name
