@@ -1,0 +1,5 @@
+mixin breadcrumbs(...items)
+  .breadcrumb.flex.items-center.text-sm.font-medium.gap-2
+    each item in items
+      a.breadcrumb-item.text-red.flex.items-center.gap-2(href="#", class="hover:opacity-100 transition-opacity")= item
+        span /
