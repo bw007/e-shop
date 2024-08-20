@@ -1,5 +1,7 @@
 extends ../layouts/main.pug
 block content
-  .flex.items-center.justify-between.gap-4.py-8.font-dewi(class="px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl")
-    .flex Filter
+  .flex.items-start.justify-between.gap-7.py-3.mb-4.font-dewi(class="px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl")
+    block breadcrumb
+  .flex.items-start.justify-between.gap-7.py-8.font-dewi(class="px-[10px] sm:px-4 mx-auto max-w-full lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl")
+    include ../components/product-list/_filter.pug
     block product-content

@@ -1,5 +1,5 @@
 mixin product-card(img="", imgLarge="", title="", price="")
-  .swiper-slide.flex.flex-col.justify-center.relative
+  .flex.flex-col.justify-center.relative
     img.absolute.top-2.right-2(src="./images/icons/star-dark.svg" alt="" width="19")
     picture.object-cover
       source(srcset=`./images/product/${img}` media="(max-width: 420px)")
