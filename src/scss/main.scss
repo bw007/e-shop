@@ -5,3 +5,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.breadcrumb-item {
+  &:not(:last-child) {
+    opacity: 0.5;
+  }
+  &:last-child {
+    span {
+      display: none;
+    }
+  }
+}
